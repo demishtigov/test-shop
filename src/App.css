@@ -1,0 +1,20 @@
+*,
+::after,
+::before{
+    margin: 0;
+}
+.container {
+    display: flex;
+   
+    height: 100vh;
+}
+
+.aside__section {
+    flex-basis: 280px;
+  padding: 1rem;
+}
+
+.main__section {
+    flex: 1;
+  padding: 1rem;
+}
