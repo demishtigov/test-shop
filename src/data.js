@@ -1,4 +1,4 @@
-    export const dataList = [
+    const dataList = [
     {
       id: 1,
       title: 'lounge resort',
@@ -8,7 +8,9 @@
       cuisine: 'american',
       rating: 5,
       price: 2500,
-      coverSrc: '/images/places/ameri.jpg',
+      priceStart: 'от',
+      coverSrc: 'https://medliga.ru/image/cache/cache/4001-5000/4664/main/x827b-e068bdd0a5a39794e718e264e552265e-0-2-228x228.jpg.pagespeed.ic.5IoUSXNPNe.jpg'
+      
     },
     {
       id: 2,
@@ -19,7 +21,9 @@
       cuisine: 'italian',
       rating: 4,
       price: 1000,
-      coverSrc: '/images/places/italian.webp',
+      pricePerMonth: '/мес.',
+      coverSrc: 'https://medliga.ru/image/cache/cache/3001-4000/3619/main/x512f-01-philips-epiq-elite-0-2-228x228.jpg.pagespeed.ic.p-A4l_jPG3.jpg'
+      
     },
     {
       id: 3,
@@ -29,8 +33,9 @@
       category: 'place',
       cuisine: 'chinese',
       rating: 3,
-      price: 2000,
-      coverSrc: '/images/places/china.jpg',
+      priceUnknown: 'Цена по запросу',
+      coverSrc: 'https://medliga.ru/image/cache/cache/3001-4000/3619/main/x512f-01-philips-epiq-elite-0-2-228x228.jpg.pagespeed.ic.p-A4l_jPG3.jpg'
+      
     },
     {
       id: 4,
@@ -41,7 +46,8 @@
       cuisine: 'american',
       rating: 1,
       price: 1800,
-      coverSrc: '/images/places/sea.jpg',
+      coverSrc: 'https://medliga.ru/image/cache/cache/3001-4000/3619/main/x512f-01-philips-epiq-elite-0-2-228x228.jpg.pagespeed.ic.p-A4l_jPG3.jpg'
+      
     },
     {
       id: 5,
@@ -52,7 +58,8 @@
       cuisine: 'italian',
       rating: 5,
       price: 2000,
-      coverSrc: '/images/places/italiian.jpg',
+      coverSrc: 'https://medliga.ru/image/cache/cache/3001-4000/3619/main/x512f-01-philips-epiq-elite-0-2-228x228.jpg.pagespeed.ic.p-A4l_jPG3.jpg'
+      
     },
     {
       id: 6,
@@ -63,7 +70,8 @@
       cuisine: 'chinese',
       rating: 5,
       price: 3500,
-      coverSrc: '/images/places/fookyew2.jpg',
+      coverSrc: 'https://medliga.ru/image/cache/cache/3001-4000/3619/main/x512f-01-philips-epiq-elite-0-2-228x228.jpg.pagespeed.ic.p-A4l_jPG3.jpg'
+      
     },
     {
       id: 7,
@@ -74,7 +82,8 @@
       cuisine: 'american',
       rating: 2,
       price: 2200,
-      coverSrc: '/images/dishes/nacho-burger.jpg',
+      coverSrc: 'https://medliga.ru/image/cache/cache/3001-4000/3619/main/x512f-01-philips-epiq-elite-0-2-228x228.jpg.pagespeed.ic.p-A4l_jPG3.jpg'
+      
     },
     {
       id: 8,
@@ -85,50 +94,11 @@
       cuisine: 'italian',
       rating: 1,
       price: 1900,
-      coverSrc: '/images/dishes/Mushroom-Risotto-Recipe-1-1200.jpg',
+      coverSrc: 'https://medliga.ru/image/cache/cache/3001-4000/3619/main/x512f-01-philips-epiq-elite-0-2-228x228.jpg.pagespeed.ic.p-A4l_jPG3.jpg'
+      
     },
-    {
-      id: 9,
-      title: 'Shitake Fried Rice',
-      serviceTime: '12-18min',
-      deliveryFee: 3.33,
-      category: 'dish',
-      cuisine: 'chinese',
-      rating: 4,
-      price: 2750,
-      coverSrc: '/images/dishes/shiitake-salmon-fried-rice-0218-103230720.jpg',
-    },
-    {
-      id: 10,
-      title: 'Pesto chicken stew',
-      serviceTime: '30-38min',
-      deliveryFee: 1.9,
-      category: 'dish',
-      cuisine: 'american',
-      rating: 2,
-      price: 4350,
-      coverSrc: '/images/dishes/pesto-chicken.jpg',
-    },
-    {
-      id: 11,
-      title: 'Bruschetta',
-      serviceTime: '16-20min',
-      deliveryFee: 4.1,
-      category: 'dish',
-      cuisine: 'italian',
-      rating: 3,
-      price: 3300,
-      coverSrc: '/images/dishes/as-tomato-bruschetta-articleLarge.jpg',
-    },
-    {
-      id: 12,
-      title: 'Dim Sums',
-      serviceTime: '24-30min',
-      deliveryFee: 1.5,
-      category: 'dish',
-      cuisine: 'chinese',
-      rating: 2,
-      price: 4100,
-      coverSrc: '/images/dishes/dimsums.jpg',
-    },
+    
+    
   ];
+
+  export default dataList
