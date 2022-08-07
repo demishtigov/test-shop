@@ -1,5 +1,6 @@
 import React from 'react';
 import ListItem from './ListItem';
+import './listItems.css'
 
 
 const Items = ({ list }) => (

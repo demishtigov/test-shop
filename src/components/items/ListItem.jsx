@@ -1,22 +1,33 @@
-import React from 'react';
-
+import React from "react";
 
 const ListItem = ({
-  item: { coverSrc, title, price, priceStart, pricePerMonth, deliveryFee, serviceTime, rating },
+  item: { coverSrc, title, price, priceStart, pricePerMonth, priceUnknown },
 }) => (
-  <div className='listItem-wrap'>
-    <img src={coverSrc} alt='' />
+  <div className="listItem-wrap">
+    <img src={coverSrc} alt="" />
     <header>
-      <h4>{title}</h4>
-      <span>🌟{rating}</span>
+      <h4 className="title">{title}</h4>
+      <br />
+      {typeof price === "number" ? (
+        <p>
+          <b>
+            {priceStart} ${price} {pricePerMonth}
+          </b>
+        </p>
+      ) : (
+        <p> <b>{priceUnknown} </b></p>
+      )}
     </header>
     <footer>
-      <p>
-        <b>{serviceTime}</b> <span> Delivery Fee ${deliveryFee}</span>
-      </p>
-      <p>
-        <b>{priceStart} ${price} {pricePerMonth}</b>
-      </p>
+      <a className="details" hrefclass="product-item__detail">
+        Подробнее
+      </a>
+      <button class="btn">
+        <span class="btn-icon">
+          <img src="../img/cart-icon.svg" alt="" />
+        </span>
+        <span class="btn-text">Получить КП</span>
+      </button>
     </footer>
   </div>
 );

@@ -1,0 +1,46 @@
+.list-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.listItem-wrap {
+  border: 1px solid #f7f7f7;
+  padding: 0 15px;
+  width: 22%;
+}
+footer {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.details {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-family: "Circe", sans-serif;
+  font-size: 14px;
+  line-height: 44px;
+  font-weight: 400;
+  color: #666565;
+  background-color: transparent;
+  transition: 0.2s;
+}
+
+.btn {
+  position: relative;
+  padding: 8px 10px 13px 10px;
+  height: 48px;
+  display: block;
+  width: 58%;
+  font-family: "Circe", sans-serif;
+  line-height: 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  color: #fff;
+  background-color: #a42320;
+  border: none;
+  border-radius: 7px;
+}

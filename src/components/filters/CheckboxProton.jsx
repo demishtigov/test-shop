@@ -13,8 +13,7 @@ const useStyles = makeStyles({
   wrap: {
     width: '100%',
     display: 'flex',
-    flexDirection: 'row-reverse',
-    justifyContent: 'space-between',
+    flexDirection: 'reverse',
     alignItems: 'center',
     marginLeft: 0,
   },
@@ -24,11 +23,12 @@ const useStyles = makeStyles({
   },
 });
 
-const CheckboxProton = ({ changeChecked, cuisine }) => {
+const CheckboxProton = ({ changeChecked, item }) => {
   const classes = useStyles();
-  const { checked, label, id } = cuisine;
+  const { checked, label, id } = item;
   return (
     <div>
+      
       <FormControlLabel
         classes={{
           label: classes.label,

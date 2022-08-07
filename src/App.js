@@ -1,29 +1,31 @@
 import "./App.css";
 import Items from "./components/items/Items";
 import Filter from "./components/filters/Filter";
-import dataList from './data'
-import {useState, useEffect} from 'react'
+import dataList from "./data";
+import { useState, useEffect } from "react";
 
-function App() {
-
-  const [selectedPrice, setSelectedPrice] = useState([10000, 2000000])
-  const [checkedPrice, setCheckedPrice] = useState([
-    { id: 1, checked: false, label: 'American' },
-    { id: 2, checked: false, label: 'Chinese' },
-    { id: 3, checked: false, label: 'Italian' },
-  ])
+const App = () => {
+  // Slider
+  const [selectedPrice, setSelectedPrice] = useState([0, 10000]);
   
-  //console.log(checkedPrice)
+  //Company
+  const [company, setCompany] = useState([
+    { id: 1, checked: false, label: "Mindray" },
+    { id: 2, checked: false, label: "Philips" },
+    { id: 3, checked: false, label: "Samsung" },
+  ]);
   
-  const [list, setList] = useState(dataList)
+  // Data
+  const [list, setList] = useState(dataList);
   const [resultsFound, setResultsFound] = useState(true);
-  
+
+  //Handlers
   const handleChangeChecked = (id) => {
-    const checkedPriceList = checkedPrice;
-    const changeCheckedPrice = checkedPriceList.map((item) =>
+    const companyList = company;
+    const changeCompany = companyList.map((item) =>
       item.id === id ? { ...item, checked: !item.checked } : item
     );
-    setCheckedPrice(changeCheckedPrice);
+    setCompany(changeCompany);
   };
 
   const handleChangePrice = (event, value) => {
@@ -33,18 +35,14 @@ function App() {
   const applyFilters = () => {
     let updatedList = dataList;
 
-    // console.log(updatedList)
-
-    // CheckedPrice Filter
-    const pricesChecked = checkedPrice
+    // Company Filter
+    const companyChecked = company
       .filter((item) => item.checked)
       .map((item) => item.label.toLowerCase());
 
-      
-    
-if (pricesChecked.length) {
+    if (companyChecked.length) {
       updatedList = updatedList.filter((item) =>
-      pricesChecked.includes(item.cuisine)
+        companyChecked.includes(item.company)
       );
     }
 
@@ -57,32 +55,31 @@ if (pricesChecked.length) {
     );
 
     setList(updatedList);
-    
 
     !updatedList.length ? setResultsFound(false) : setResultsFound(true);
   };
+ 
   useEffect(() => {
     applyFilters();
-  }, [ checkedPrice, selectedPrice]);
-  
+  }, [company, selectedPrice]);
+
   return (
     <>
       <div className="container">
         <aside className="aside__section">
-          <Filter 
+          <Filter
             selectedPrice={selectedPrice}
             changePrice={handleChangePrice}
-            checkedPrice={checkedPrice}
+            company={company}
             changeChecked={handleChangeChecked}
           />
         </aside>
         <main className="main__section">
-          {resultsFound ? <Items list={list} /> : null }
-          
+          {resultsFound ? <Items list={list} /> : null}
         </main>
       </div>
     </>
   );
-}
+};
 
 export default App;
