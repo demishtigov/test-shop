@@ -1,7 +1,7 @@
 import React from "react";
 
 const ListItem = ({
-  item: { coverSrc, title, price, priceStart, pricePerMonth, priceUnknown },
+  item: { coverSrc, title, price, priceStart, pricePerMonth, priceUnknown, class1, type, view },
 }) => (
   <div className="listItem-wrap">
     <img src={coverSrc} alt="" />
@@ -29,6 +29,9 @@ const ListItem = ({
         <span class="btn-text">Получить КП</span>
       </button>
     </footer>
+      <h4 className="display-none">{class1}</h4>
+      <h4 className="display-none">{type}</h4>
+      <h4 className="display-none">{view}</h4>
   </div>
 );
 

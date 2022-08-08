@@ -6,8 +6,14 @@
 .listItem-wrap {
   border: 1px solid #f7f7f7;
   padding: 0 15px;
-  width: 22%;
+  max-width: 22%;
 }
+
+.listItem-wrap:hover{
+  display:flex;
+  flex-direction: column;
+}
+
 footer {
   display: flex;
   flex-flow: row nowrap;
@@ -43,4 +49,8 @@ footer {
   background-color: #a42320;
   border: none;
   border-radius: 7px;
+}
+
+.display-none{
+  display: none;
 }
